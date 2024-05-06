@@ -30,25 +30,10 @@ public class BasicSimulation extends Simulation {
         setUp(
                 //myFirstScenario.injectOpen(constantUsersPerSec(2).during(60))
                 myFirstScenario.injectClosed(
-//                        constantUsersPerSec(700).during(5*60)
-                        constantConcurrentUsers(10).during(Duration.ofMinutes(5))
+                        constantConcurrentUsers(10).during(Duration.ofMinutes(10))
                 )
-        ).throttle(reachRps(12000).in(Duration./*ofSeconds(10)*/ofMinutes(1)),
-                holdFor(Duration.ofMinutes(10))/*,
-                   reachRps(300).in(Duration.ofSeconds(10)),
-                   holdFor(Duration.ofMinutes(5))*/
+        ).throttle(reachRps(12000).in(Duration.ofMinutes(1)),
+                holdFor(Duration.ofMinutes(10))
         ).protocols(httpProtocol);
-
-//        setUp(
-//                //myFirstScenario.injectOpen(constantUsersPerSec(2).during(60))
-//                myFirstScenario.injectOpen(
-////                        constantUsersPerSec(700).during(5*60)
-//                        constantUsersPerSec(1).during(Duration.ofMinutes(5))
-//                )
-//        ).throttle(reachRps(3000000).in(Duration.ofSeconds(10)),
-//                   holdFor(Duration.ofMinutes(5))/*,
-//                   reachRps(300).in(Duration.ofSeconds(10)),
-//                   holdFor(Duration.ofMinutes(5))*/
-//        ).protocols(httpProtocol);
     }
 }

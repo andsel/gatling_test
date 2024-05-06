@@ -15,10 +15,7 @@ if [ ! -e "gatling-charts-highcharts-bundle-$GATLING_VERSION-bundle.zip" ]; then
   curl -s -o "gatling-charts-highcharts-bundle-$GATLING_VERSION-bundle.zip" "https://repo1.maven.org/maven2/io/gatling/highcharts/gatling-charts-highcharts-bundle/$GATLING_VERSION/gatling-charts-highcharts-bundle-$GATLING_VERSION-bundle.zip"
 fi
 
-
-# TODO copy the gatling on remote host
-mkdir test_run
-
+mkdir -p test_run
 
 # unpack
 unzip gatling-charts-highcharts-bundle-$GATLING_VERSION-bundle.zip -d test_run/
@@ -30,4 +27,4 @@ cp BasicSimulation.java "$GATLING_SIMULATIONS_DIR"
 
 # -nr: no report generation
 # -rm: run-mode local 
-nohup $GATLING_RUNNER -nr -rm local -s $SIMULATION_NAME > run.log 2>&1 &
+#nohup $GATLING_RUNNER -nr -rm local -s $SIMULATION_NAME > run.log 2>&1 &
