@@ -1,0 +1,45 @@
+{
+    "_id": "6616ae27381737aed806e02d",
+    "index": 0,
+    "guid": "d29f2a85-4e16-4ced-90fe-3f0c87a5c30b",
+    "isActive": false,
+    "balance": "$3,908.28",
+    "picture": "http://placehold.it/32x32",
+    "age": 25,
+    "eyeColor": "brown",
+    "name": "Shaw Conrad",
+    "gender": "male",
+    "company": "KENEGY",
+    "email": "shawconrad@kenegy.com",
+    "phone": "+1 (942) 488-2513",
+    "address": "583 Blake Court, Lynn, Maine, 7495",
+    "about": "Adipisicing cillum anim amet reprehenderit esse tempor id labore magna. Quis Lorem velit reprehenderit laborum ex Lorem et cupidatat. Ut nulla in deserunt enim reprehenderit. Dolore officia enim exercitation in minim esse pariatur mollit pariatur nulla mollit. Incididunt incididunt fugiat sint Lorem consequat in exercitation incididunt est eiusmod. Labore deserunt irure tempor elit duis adipisicing voluptate aliqua.\r\n",
+    "registered": "2021-02-26T06:10:47 -01:00",
+    "latitude": -22.480799,
+    "longitude": 123.57761,
+    "tags": [
+        "magna",
+        "reprehenderit",
+        "excepteur",
+        "sit",
+        "aliquip",
+        "deserunt",
+        "duis"
+    ],
+    "friends": [
+        {
+            "id": 0,
+            "name": "Beatriz Keith"
+        },
+        {
+            "id": 1,
+            "name": "Dixon Finch"
+        },
+        {
+            "id": 2,
+            "name": "Erickson Vang"
+        }
+    ],
+    "greeting": "Hello, Shaw Conrad! You have 9 unread messages.",
+    "favoriteFruit": "apple"
+}
