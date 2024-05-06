@@ -9,7 +9,7 @@ import java.time.Duration;
 public class BasicSimulation extends Simulation {
 
     // Add the HttpProtocolBuilder:
-    HttpProtocolBuilder httpProtocol = http.baseUrl("http://localhost:8080")
+    HttpProtocolBuilder httpProtocol = http.baseUrl("http://10.154.0.14:8080")
             .acceptHeader("application/json")
             .contentTypeHeader("application/json")
             .shareConnections();
@@ -31,10 +31,10 @@ public class BasicSimulation extends Simulation {
                 //myFirstScenario.injectOpen(constantUsersPerSec(2).during(60))
                 myFirstScenario.injectClosed(
 //                        constantUsersPerSec(700).during(5*60)
-                        constantConcurrentUsers(40).during(Duration.ofMinutes(5))
+                        constantConcurrentUsers(10).during(Duration.ofMinutes(5))
                 )
-        ).throttle(reachRps(200000).in(Duration./*ofSeconds(10)*/ofMinutes(1)),
-                holdFor(Duration.ofMinutes(5))/*,
+        ).throttle(reachRps(12000).in(Duration./*ofSeconds(10)*/ofMinutes(1)),
+                holdFor(Duration.ofMinutes(10))/*,
                    reachRps(300).in(Duration.ofSeconds(10)),
                    holdFor(Duration.ofMinutes(5))*/
         ).protocols(httpProtocol);
